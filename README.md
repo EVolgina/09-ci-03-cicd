@@ -48,7 +48,7 @@ INFO: Linux 5.15.90.1-microsoft-standard-WSL2 amd64
 - Проверьте, что все файлы загрузились успешно.
 
 
-- В ответе пришлите файл maven-metadata.xml для этого артефекта. [maven-metadata.xml] ()
+- В ответе пришлите файл maven-metadata.xml для этого артефекта. [maven-metadata.xml] (https://github.com/EVolgina/09-ci-03-cicd/blob/main/meta)
 ## Знакомство с Maven
 # Подготовка к выполнению
 - Скачайте дистрибутив с maven.
@@ -56,11 +56,21 @@ INFO: Linux 5.15.90.1-microsoft-standard-WSL2 amd64
 - Удалите из apache-maven-<version>/conf/settings.xml упоминание о правиле, отвергающем HTTP- соединение — раздел mirrors —> id: my-repository-http-unblocker.
 - Проверьте mvn --version.
 ```
+Wget https://dlcdn.apache.org/maven/maven-3/3.8.8/binaries/apache-maven-3.8.8-bin.zip
+unzip -q -d ~apache-maven-3.8.8-bin.zip
 
+java-1.11.0-openjdk-amd64  
+java-11-openjdk-amd64
+devops@WORKBOOK:~/ansible/mnt-homeworks/09-ci-03-cicd/example$ mvn --version
+Apache Maven 3.8.8 (4c87b05d9aedce574290d1acc98575ed5eb6cd39)
+Maven home: /home/devops/ansible/mnt-homeworks/09-ci-03-cicd/example/apache-maven-3.8.8
+Java version: 11.0.20.1, vendor: Ubuntu, runtime: /usr/lib/jvm/java-11-openjdk-amd64
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "5.15.90.1-microsoft-standard-wsl2", arch: "amd64", family: "unix"
 ```
-Заберите директорию mvn с pom.
-Основная часть
-Поменяйте в pom.xml блок с зависимостями под ваш артефакт из первого пункта задания для Nexus (java с версией 8_282).
-Запустите команду mvn package в директории с pom.xml, ожидайте успешного окончания.
-Проверьте директорию ~/.m2/repository/, найдите ваш артефакт.
-В ответе пришлите исправленный файл pom.xml.
+- Заберите директорию mvn с pom.
+## Основная часть
+- Поменяйте в pom.xml блок с зависимостями под ваш артефакт из первого пункта задания для Nexus (java с версией 8_282).
+- Запустите команду mvn package в директории с pom.xml, ожидайте успешного окончания.
+- Проверьте директорию ~/.m2/repository/, найдите ваш артефакт.
+- В ответе пришлите исправленный файл pom.xml. [pom.xml]()
