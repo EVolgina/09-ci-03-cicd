@@ -1,8 +1,0 @@
----
-# group_vars/vector.yml
-vector_version: 0.31.0
-vector_config_dir: "{{ ansible_user_dir }}/vector_config"
-vector_workdir: "/home/devops/ansible/mnt-homeworks/08-ansible-02-playbook"
-vector_os_user: "devops"
-
-

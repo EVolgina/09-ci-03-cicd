@@ -1,7 +1,0 @@
-# group_vars/clickhouse/vars.yml
-clickhouse_version: 22.12.2.25
-clickhouse_packages:
-  - clickhouse-client 
-  - clickhouse-server
-  - clickhouse-common-static
-
