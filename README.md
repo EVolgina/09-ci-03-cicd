@@ -17,6 +17,16 @@
 -Сделайте так, чтобы binary был доступен через вызов в shell (или поменяйте переменную PATH, или любой другой, удобный вам способ).
 - Проверьте sonar-scanner --version.
 ```
+wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
+unzip -q -d ~ 
+sonar-scanner-cli-5.0.1.3006-linux.zip
+devops@WORKBOOK:~/ansible/mnt-homeworks/09-ci-03-cicd/example$ export PATH=$PATH:$(pwd)/sonar-scanner-5.0.1.3006-linux/bin
+devops@WORKBOOK:~/ansible/mnt-homeworks/09-ci-03-cicd/example$ sonar-scanner --version
+INFO: Scanner configuration file: /home/devops/ansible/mnt-homeworks/09-ci-03-cicd/example/sonar-scanner-5.0.1.3006-linux/conf/sonar-scanner.properties
+INFO: Project root configuration file: NONE
+INFO: SonarScanner 5.0.1.3006
+INFO: Java 17.0.7 Eclipse Adoptium (64-bit)
+INFO: Linux 5.15.90.1-microsoft-standard-WSL2 amd64
 
 ```
 - Запустите анализатор против кода из директории example с дополнительным ключом -Dsonar.coverage.exclusions=fail.py.
@@ -25,17 +35,19 @@
 ![bug](https://github.com/EVolgina/09-ci-03-cicd/blob/main/bag.png)
 - Запустите анализатор повторно — проверьте, что QG пройдены успешно.
 - Сделайте скриншот успешного прохождения анализа, приложите к решению ДЗ.
- ![nobug]()
-Знакомство с Nexus
-Основная часть
-В репозиторий maven-public загрузите артефакт с GAV-параметрами:
-groupId: netology;
-artifactId: java;
-version: 8_282;
-classifier: distrib;
-type: tar.gz.
-В него же загрузите такой же артефакт, но с version: 8_102.
-Проверьте, что все файлы загрузились успешно.
+ ![nobug](https://github.com/EVolgina/09-ci-03-cicd/blob/main/nobag.png)
+## Знакомство с Nexus
+# Основная часть
+- В репозиторий maven-public загрузите артефакт с GAV-параметрами:
+- groupId: netology;
+- artifactId: java;
+- version: 8_282;
+- classifier: distrib;
+- type: tar.gz.
+- В него же загрузите такой же артефакт, но с version: 8_102.
+- Проверьте, что все файлы загрузились успешно.
+
+
 В ответе пришлите файл maven-metadata.xml для этого артефекта.
 Знакомство с Maven
 Подготовка к выполнению
