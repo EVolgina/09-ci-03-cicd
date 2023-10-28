@@ -46,7 +46,7 @@ INFO: Linux 5.15.90.1-microsoft-standard-WSL2 amd64
 - type: tar.gz.
 - В него же загрузите такой же артефакт, но с version: 8_102.
 - Проверьте, что все файлы загрузились успешно.
-
+![nexus]()
 
 - В ответе пришлите файл maven-metadata.xml для этого артефекта. [maven-metadata.xml] (https://github.com/EVolgina/09-ci-03-cicd/blob/main/meta)
 ## Знакомство с Maven
@@ -73,4 +73,12 @@ OS name: "linux", version: "5.15.90.1-microsoft-standard-wsl2", arch: "amd64", f
 - Поменяйте в pom.xml блок с зависимостями под ваш артефакт из первого пункта задания для Nexus (java с версией 8_282).
 - Запустите команду mvn package в директории с pom.xml, ожидайте успешного окончания.
 - Проверьте директорию ~/.m2/repository/, найдите ваш артефакт.
-- В ответе пришлите исправленный файл pom.xml. [pom.xml]()
+```
+devops@WORKBOOK:~/.m2/repository/netology/java$ ls
+8_102  8_282
+devops@WORKBOOK:~/.m2/repository/netology/java/8_282$ ls
+java-8_282.pom.lastUpdated
+devops@WORKBOOK:~/.m2/repository/netology/java/8_102$ ls
+java-8_102.pom.lastUpdated
+```
+- В ответе пришлите исправленный файл pom.xml. [pom.xml](https://github.com/EVolgina/09-ci-03-cicd/blob/main/pom.xml)
