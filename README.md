@@ -46,7 +46,7 @@ INFO: Linux 5.15.90.1-microsoft-standard-WSL2 amd64
 - type: tar.gz.
 - В него же загрузите такой же артефакт, но с version: 8_102.
 - Проверьте, что все файлы загрузились успешно.
-![nexus]()
+![nexus](https://github.com/EVolgina/09-ci-03-cicd/blob/main/nexus.PNG)
 
 - В ответе пришлите файл maven-metadata.xml для этого артефекта. [maven-metadata.xml] (https://github.com/EVolgina/09-ci-03-cicd/blob/main/meta)
 ## Знакомство с Maven
